@@ -4,11 +4,11 @@ import { CgProfile } from "react-icons/cg";
 export default function Sideba({ activeTab, setActiveTab, sidebarOpen, setSidebarOpen }) {
   return (
     <div className={`bg-black shadow-lg ${sidebarOpen ? 'w-64' : 'w-18'} transition-all duration-300`}>
-      <div className="p-4 flex items-center justify-between border-b">
+      <div className="p-4 mb-12 flex items-center justify-between">
         {sidebarOpen && <h1 className="text-3xl md:text-4xl text-orange-500 font-bold">Supa<span className="text-white">Menu</span></h1>}
         <button 
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="p-1 rounded-lg text-orange-500 hover:text-white"
+          className="rounded-lg text-orange-500 hover:text-white"
         >
           {sidebarOpen ? '◀' : '▶'}
         </button>

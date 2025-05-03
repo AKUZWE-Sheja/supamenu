@@ -7,7 +7,7 @@ import UsersBoard from '../components/UsersBoard';
 import Overview from '../components/Overview';
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (

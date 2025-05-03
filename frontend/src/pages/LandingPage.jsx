@@ -3,32 +3,14 @@ import { GiForkKnifeSpoon } from "react-icons/gi";
 import { BsMenuUp } from "react-icons/bs";
 import { MdNotifications } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import Navbar from "../components/Navbar";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <div className="bg-black px-6 py-8 md:py-10">
-        <nav className="flex justify-between items-center max-w-6xl mx-auto">
-          <h1 className="text-3xl md:text-4xl text-white font-bold">
-            Supa<span className="text-orange-500">Menu</span>
-          </h1>
-          <div className="flex items-center space-x-4 md:space-x-6">
-            <button className="text-xl text-gray-200 hover:text-orange-500 transition-colors">
-              <FaSearch />
-            </button>
-            <button className="text-2xl text-gray-200 hover:text-orange-500 transition-colors relative">
-              <MdNotifications />
-              <span className="absolute top-0 right-0 w-2 h-2 bg-orange-500 rounded-full"></span>
-            </button>
-            <div className="hidden md:flex items-center space-x-2">
-              <span className="text-gray-300">Jacques Kagabo</span>
-              <div className="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center text-gray-300">
-                <CgProfile className="text-xl" />
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
 
         <header className="max-w-4xl mx-auto text-center mt-10 mb-8 px-4">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">

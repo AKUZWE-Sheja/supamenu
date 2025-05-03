@@ -1,8 +1,11 @@
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
+
+    const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -17,6 +20,12 @@ export default function Login() {
     }));
   };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Login data:', formData);
+        navigate('/dashboard');
+    }  
+    
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-orange-500">
       {/* Branding Section */}
@@ -39,7 +48,7 @@ export default function Login() {
             </p>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email" className="block text-xs font-medium text-gray-500 mb-1">
                 EMAIL
