@@ -1,0 +1,79 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Resto {
+  id        Int      @id @default(autoincrement())
+  name      String
+  location  String
+  contact   String?
+  menus     Menu[]
+  orders    Order[]
+  users     User[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Menu {
+  id          Int        @id @default(autoincrement())
+  name        String
+  description String?
+  qrCode      String?    @default("none")
+  categories  Category[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  Resto       Resto?     @relation(fields: [restoId], references: [id])
+  restoId     Int?
+}
+
+model Category {
+  id        Int      @id @default(autoincrement())
+  name      String
+  items     Item[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Menu      Menu?    @relation(fields: [menuId], references: [id])
+  menuId    Int?
+}
+
+model Item {
+  id          Int       @id @default(autoincrement())
+  name        String
+  price       Float
+  description String?
+  image       String?
+  orders      Order[]   @relation("OrderItems")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  Category    Category? @relation(fields: [categoryId], references: [id])
+  categoryId  Int?
+}
+
+model Order {
+  id           Int      @id @default(autoincrement())
+  customerName String?
+  total        Float
+  items        Item[]   @relation("OrderItems")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  Resto        Resto?   @relation(fields: [restoId], references: [id])
+  restoId      Int?
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  phone     String
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Resto     Resto?   @relation(fields: [restoId], references: [id])
+  restoId   Int?
+}

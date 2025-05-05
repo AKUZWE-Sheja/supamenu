@@ -1,0 +1,46 @@
+{"level":"info","message":"Login route hit","service":"restful-ne"}
+{"email":"john@example.com","level":"info","message":"Request body received:","password":"password123","service":"restful-ne"}
+{"email":"john@example.com","level":"info","message":"Validated login data:","password":"password123","service":"restful-ne"}
+{"level":"info","message":"User logged in successfully with ID: 1","service":"restful-ne"}
+{"level":"info","message":"Fetching restaurants for user","service":"restful-ne","userId":1}
+{"level":"info","message":"Restaurants fetched successfully","restos":[],"service":"restful-ne"}
+{"data":{"location":"123 Main Street, Food City","name":"SupaMenu Bistro"},"level":"info","message":"Attempting to add a new restaurant","service":"restful-ne","userId":1}
+{"level":"info","message":"Restaurant added successfully","resto":{"contact":null,"createdAt":"2025-05-05T11:25:10.451Z","id":1,"location":"123 Main Street, Food City","name":"SupaMenu Bistro","updatedAt":"2025-05-05T11:25:10.451Z"},"service":"restful-ne"}
+{"data":{"customerName":"John Doe","items":[1,2,3],"restoId":1,"total":45.99},"level":"info","message":"Attempting to create a new order","service":"restful-ne","userId":1}
+{"error":{"clientVersion":"6.7.0","code":"P2025","meta":{"cause":"Expected 3 records to be connected, found only 0.","modelName":"Order"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"Error creating order","service":"restful-ne"}
+{"data":{"customerName":"John Doe","items":[1,2,3],"restoId":1,"total":45.99},"level":"info","message":"Attempting to create a new order","service":"restful-ne","userId":1}
+{"error":{"clientVersion":"6.7.0","code":"P2025","meta":{"cause":"Expected 3 records to be connected, found only 0.","modelName":"Order"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"Error creating order","service":"restful-ne"}
+{"level":"info","message":"Login route hit","service":"restful-ne"}
+{"email":"john@example.com","level":"info","message":"Request body received:","password":"password123","service":"restful-ne"}
+{"email":"john@example.com","level":"info","message":"Validated login data:","password":"password123","service":"restful-ne"}
+{"level":"info","message":"User logged in successfully with ID: 1","service":"restful-ne"}
+{"data":{"description":"A selection of breakfast items","name":"Breakfast Menu","qrCode":"https://example.com/qrcode/breakfast","restoId":1},"level":"info","message":"Attempting to create a new menu","service":"restful-ne","userId":1}
+{"level":"info","menu":{"createdAt":"2025-05-05T18:15:15.305Z","description":"A selection of breakfast items","id":1,"name":"Breakfast Menu","qrCode":"https://example.com/qrcode/breakfast","restoId":1,"updatedAt":"2025-05-05T18:15:15.305Z"},"message":"Menu created successfully","service":"restful-ne"}
+{"data":{"description":"A selection of baked & cold items","name":"Vanilla Themed Menu","qrCode":"https://example.com/qrcode/vanilla","restoId":1},"level":"info","message":"Attempting to create a new menu","service":"restful-ne","userId":1}
+{"level":"info","menu":{"createdAt":"2025-05-05T18:21:32.872Z","description":"A selection of baked & cold items","id":2,"name":"Vanilla Themed Menu","qrCode":"https://example.com/qrcode/vanilla","restoId":1,"updatedAt":"2025-05-05T18:21:32.872Z"},"message":"Menu created successfully","service":"restful-ne"}
+{"level":"info","message":"Fetching all menus","service":"restful-ne"}
+{"level":"info","menus":[{"Resto":{"id":1,"name":"SupaMenu Bistro"},"description":"A selection of breakfast items","id":1,"name":"Breakfast Menu","qrCode":"https://example.com/qrcode/breakfast"},{"Resto":{"id":1,"name":"SupaMenu Bistro"},"description":"A selection of baked & cold items","id":2,"name":"Vanilla Themed Menu","qrCode":"https://example.com/qrcode/vanilla"}],"message":"Menus fetched successfully","service":"restful-ne"}
+{"data":{"menuId":1,"name":"Appetizers"},"level":"info","message":"Attempting to create a new category","service":"restful-ne","userId":1}
+{"category":{"createdAt":"2025-05-05T18:23:08.925Z","id":1,"menuId":1,"name":"Appetizers","updatedAt":"2025-05-05T18:23:08.925Z"},"level":"info","message":"Category created successfully","service":"restful-ne"}
+{"data":{"menuId":2,"name":"Desserts"},"level":"info","message":"Attempting to create a new category","service":"restful-ne","userId":1}
+{"category":{"createdAt":"2025-05-05T18:23:31.619Z","id":2,"menuId":2,"name":"Desserts","updatedAt":"2025-05-05T18:23:31.619Z"},"level":"info","message":"Category created successfully","service":"restful-ne"}
+{"level":"info","message":"Fetching all categories for user","service":"restful-ne","userId":1}
+{"categories":[{"Menu":{"id":1,"name":"Breakfast Menu"},"id":1,"name":"Appetizers"},{"Menu":{"id":2,"name":"Vanilla Themed Menu"},"id":2,"name":"Desserts"}],"level":"info","message":"Categories fetched successfully","service":"restful-ne"}
+{"data":{"menuId":1,"name":"Junkies"},"level":"info","message":"Attempting to create a new category","service":"restful-ne","userId":1}
+{"category":{"createdAt":"2025-05-05T18:28:54.139Z","id":3,"menuId":1,"name":"Junkies","updatedAt":"2025-05-05T18:28:54.139Z"},"level":"info","message":"Category created successfully","service":"restful-ne"}
+{"data":{"categoryId":3,"description":"A delicious cheeseburger with lettuce, tomato, and cheese.","image":"https://example.com/images/cheeseburger.jpg","name":"Cheeseburger","price":9.99},"level":"info","message":"Attempting to create a new item","service":"restful-ne","userId":1}
+{"item":{"categoryId":3,"createdAt":"2025-05-05T18:29:20.318Z","description":"A delicious cheeseburger with lettuce, tomato, and cheese.","id":1,"image":"https://example.com/images/cheeseburger.jpg","name":"Cheeseburger","price":9.99,"updatedAt":"2025-05-05T18:29:20.318Z"},"level":"info","message":"Item created successfully","service":"restful-ne"}
+{"level":"info","message":"Fetching all items","service":"restful-ne"}
+{"items":[{"Category":{"id":3,"name":"Junkies"},"description":"A delicious cheeseburger with lettuce, tomato, and cheese.","id":1,"image":"https://example.com/images/cheeseburger.jpg","name":"Cheeseburger","price":9.99}],"level":"info","message":"Items fetched successfully","service":"restful-ne"}
+{"data":{"categoryId":3,"description":"A delicious cheeseburger with lettuce, meat, and cheese.","image":"https://example.com/images/cheeseburger.jpg","name":"MeatFatburger","price":10},"level":"info","message":"Attempting to create a new item","service":"restful-ne","userId":1}
+{"item":{"categoryId":3,"createdAt":"2025-05-05T18:30:39.513Z","description":"A delicious cheeseburger with lettuce, meat, and cheese.","id":2,"image":"https://example.com/images/cheeseburger.jpg","name":"MeatFatburger","price":10,"updatedAt":"2025-05-05T18:30:39.513Z"},"level":"info","message":"Item created successfully","service":"restful-ne"}
+{"itemId":"2","level":"info","message":"Attempting to delete item","service":"restful-ne"}
+{"itemId":"2","level":"info","message":"Item deleted successfully","service":"restful-ne"}
+{"data":{"categoryId":1,"description":"Classic pizza with tomato sauce, mozzarella, and fresh basil.","image":"https://example.com/images/margherita-pizza.jpg","name":"Margherita Pizza","price":12.99},"level":"info","message":"Attempting to create a new item","service":"restful-ne","userId":1}
+{"item":{"categoryId":1,"createdAt":"2025-05-05T18:34:02.109Z","description":"Classic pizza with tomato sauce, mozzarella, and fresh basil.","id":3,"image":"https://example.com/images/margherita-pizza.jpg","name":"Margherita Pizza","price":12.99,"updatedAt":"2025-05-05T18:34:02.109Z"},"level":"info","message":"Item created successfully","service":"restful-ne"}
+{"data":{"categoryId":2,"description":"Rich and moist vanilla cake with a creamy lemon frosting.","image":"https://example.com/images/vnanilla-cake.jpg","name":"Vanilla Cake","price":6.5},"level":"info","message":"Attempting to create a new item","service":"restful-ne","userId":1}
+{"item":{"categoryId":2,"createdAt":"2025-05-05T18:34:48.736Z","description":"Rich and moist vanilla cake with a creamy lemon frosting.","id":4,"image":"https://example.com/images/vnanilla-cake.jpg","name":"Vanilla Cake","price":6.5,"updatedAt":"2025-05-05T18:34:48.736Z"},"level":"info","message":"Item created successfully","service":"restful-ne"}
+{"data":{"customerName":"Jane Doe","items":[1,3],"restoId":1,"total":20.09},"level":"info","message":"Attempting to create a new order","service":"restful-ne","userId":1}
+{"level":"info","message":"Order created successfully","order":{"createdAt":"2025-05-05T18:36:20.402Z","customerName":"Jane Doe","id":3,"restoId":1,"total":20.09,"updatedAt":"2025-05-05T18:36:20.402Z"},"service":"restful-ne"}
+{"level":"info","message":"Fetching all orders","service":"restful-ne"}
+{"level":"info","message":"Orders fetched successfully","orders":[{"Resto":{"id":1,"name":"SupaMenu Bistro"},"customerName":"Jane Doe","id":3,"items":[{"id":1,"name":"Cheeseburger","price":9.99},{"id":3,"name":"Margherita Pizza","price":12.99}],"total":20.09}],"service":"restful-ne"}

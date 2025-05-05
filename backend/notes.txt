@@ -1,0 +1,12 @@
+ - npm install express typescript ts-node @types/express @types/node zod prisma @prisma/client jsonwebtoken bcryptjs @types/jsonwebtoken @types/bcryptjs dotenv cors cookie-parser swagger-jsdoc swagger-ui-express helmet --save-dev jest ts-jest @types/jest supertest @types/supertest
+ - npm install -D nodemon
+ - tsconfig.json
+ - npm i prisma
+ - prisma format
+ - npx prisma migrate dev --name init
+ - npx prisma generate
+ - npx prisma studio
+ - nodemon --exec ts-node src/server.ts
+
+
+ 
