@@ -1,0 +1,6 @@
+- $env:REACT_NATIVE_PACKAGER_HOSTNAME = "10.12.75.64"
+- echo $env:REACT_NATIVE_PACKAGER_HOSTNAME
+- npm install @expo-google-fonts/playfair-display expo-font
+- npm install react-native-vector-icons
+- https://withfra.me/react-native-vector-icons/directory
+ 
