@@ -4,7 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { CustomText } from '../components/CustomText';
 
-const QRPage = () => {
+const QRPage = ({ navigation }) => {
   return (
     <View style={styles.container}>
 
@@ -22,11 +22,10 @@ const QRPage = () => {
       <CustomText style={styles.dividerText}>OR</CustomText>
 
       {/* Scan & Pay */}
-      <TouchableOpacity style={styles.scanButton}>
+      <TouchableOpacity style={styles.scanButton} onPress={() => navigation.navigate('RestoDashboard')}>
         <Ionicons name="qr-code-outline" color="#000" size={160} />
         <CustomText style={styles.scanButtonText}>Scan, Pay & Enjoy!</CustomText>
       </TouchableOpacity>
-
 
     </View>
   )

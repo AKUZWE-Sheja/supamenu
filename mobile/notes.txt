@@ -3,4 +3,7 @@
 - npm install @expo-google-fonts/playfair-display expo-font
 - npm install react-native-vector-icons
 - https://withfra.me/react-native-vector-icons/directory
+
+- npm install @react-navigation/native @react-navigation/stack
+- npx expo install react-native-screens react-native-safe-area-context
  
